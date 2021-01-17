@@ -1,3 +1,15 @@
-<p>{{todo.id}}</p>
-<p>{{todo.title}}</p>
-<p>{{todo.completed}}</p>
+<div class="container" [ngClass] = "setClasses()">
+    <div class="row">
+        <div class="col-md-2">
+            <input (change) = "onToggle(todo)" type="checkbox"/>
+        </div>
+        <div class="col-md-8">
+            <h6 class="text-primary">{{todo.title}}</h6>
+        </div>
+
+        <div class="col-md-2">
+            <button (click) = "onDelete(todo)" type="button" class="btn-md btn-danger rounded float-right">x</button>
+        </div>
+    </div>
+
+</div>
